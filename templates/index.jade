@@ -1,0 +1,53 @@
+extends layout
+
+block append vars
+  - discription = 'hello'
+  - keyword = 'hello,sam,developer'
+
+block javacode
+  script(src='js/mootools-core.js', type='text/javascript')
+  script(src='js/mootools-more.js', type='text/javascript')
+  script(src='js/powertools-1.2.0.js', type='text/javascript')
+  script(src='js/slider.js', type='text/javascript')
+  script(src='js/bootstrap.min.js', type='text/javascript')
+
+block content
+  h1.heading About Us
+  p Financial Algorithms provide advance programming services for hedge funds and retail traders. Final employees have many years of programming experience and understand the high demands of the trading industry. We can deliver tailor made solutions to meet our customer's requirements.
+  p Financial Algorithms specializes in development and back testing of automatic strategies including:
+  ul.arrow
+      li Multi Market Strategies
+      li High Frequency Trading
+      li Scalping
+      li Short and Long Term Strategies
+      li Scanners
+      li Stocks
+      li Options analyze 
+      li Forex and Foreign Markets with Custom Software
+  div.row
+    div.col-lg-6.col-md-6.col-sm-6.col-xs-6
+      h1.heading MarketBalance
+      p MarketBlance allows you to view the relationship between the powers that move the market in real time as the balance between them change during trading sessions.
+      img.img-responsive.thumbnail(src="img/MarketBalance1.png")
+    div.col-lg-6.col-md-6.col-sm-6.col-xs-6  
+      h1.heading TPOChart
+      p TPOChart provides users with the information needed to understand the market's internal structure and development using unique presentation of market data.
+      img.img-responsive.thumbnail(src="img/MarketBalance1.png")
+
+block widget
+  div#djslider-loader88.djslider-loader
+    div#djslider88.djslider
+      div#slider-container88.slider-container
+        ul#slider88
+          li <a href="#" target="_self"> <img src="img/MarketBalance1.png" alt="MB3"> </a> 
+          li <a href="#" target="_self"> <img src="img/MarketBalance1.png" alt="MB1"> </a>
+          li <a href="#" target="_self"> <img src="img/MarketBalance1.png" alt="TPO1"> </a> 
+          li <a href="#" target="_self"> <img src="img/MarketBalance1.png" alt="MB2"> </a>
+          li <a href="#" target="_self"> <img src="img/MarketBalance1.png" alt="MB5"> </a> 
+          li <a href="#" target="_self"> <img src="img/MarketBalance1.png" alt="TPO2"> </a> 
+          li <a href="#" target="_self"> <img src="img/MarketBalance1.png" alt="TPO3"> </a>
+      div#navigation88.navigation-container <img id="prev88" class="prev-button" src="img/up.png" alt="Previous" style="opacity: 0;"> <img id="next88" class="next-button" src="img/down.png" alt="Next"> <img id="play88" class="play-button" src="img/play.png" alt="Play"> <img id="pause88" class="pause-button" src="img/pause.png" alt="Pause">
+
+
+
+

@@ -1,0 +1,74 @@
+doctype html
+block vars
+  - var bodyclass = null;
+  - var discription = null;
+  - var keyword = null;
+html(lang='en')
+  head
+    block head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width')
+    meta(name='discription' content='#{discription}')
+    meta(name='keyword' content='#{keyword}')
+    title
+      block title 
+        = locals.name
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Oswald|PT+Sans:400,700,400italic')
+    link(rel='stylesheet', href='/css/style.css')
+    link(rel='stylesheet', href='/css/style_slider.css')
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    block javacode
+    script(src='js/custom.js', type='text/javascript')
+  body(class=bodyclass)
+    header.top_header.clearfix
+      div.container
+        div.row
+          div.col-lg-4.col-md-4.col-sm-4.col-xs-4
+            div.logo
+              a(href=locals.url)
+                h1.logo-text Software Tools and Services for Traders
+          div.col-lg-8.col-md-8.col-sm-8.col-xs-8
+            ul.menu
+              block menu
+                li 
+                  a(href='index.html') Home
+                li 
+                  a(href='news.html') News
+                li 
+                  a(href='services.html') Services
+                li 
+                  a(href='products.html') Products
+                li 
+                  a(href='#') Partners
+                li 
+                  a(href='#') Contact
+    block big_header
+    div.body_wrap.clearfix
+      div.container
+        div.row
+          block full
+            div.col-lg-8.col-md-8.col-sm-8.col-xs-8
+              block content
+            div.col-lg-4.col-md-4.col-sm-4.col-xs-4
+              block widget
+
+    span.pad.clearfix
+    footer.footer_wrap.clearfix
+      div.border
+        div.container
+          div.row
+            div.col-lg-8.col-md-8.col-sm-8.col-xs-8
+              section.copy
+                p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
+                  a(href='https://github.com/jnordberg/wintersmith') Wintersmith
+                  //- please leave the "powered by" if you use the design
+            div.col-lg-4.col-md-4.col-sm-4.col-xs-4
+              ul.social.pull-right
+                li(title='', data-original-title='twitter').custom-tooltip.blue-tooltip
+                  a(href='#').twitter-icon
+                li(title='', data-original-title='facebook').custom-tooltip.blue-tooltip
+                  a(href='#').facebook-icon
+                li(title='', data-original-title='skype').custom-tooltip.blue-tooltip
+                  a(href='#').skype-icon

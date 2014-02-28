@@ -1,0 +1,41 @@
+extends layout
+
+block append vars
+  - discription = 'hello'
+  - keyword = 'hello,sam,developer'
+
+block javacode
+  link(rel="stylesheet", type="text/css", href="css/jquery.fancybox.css")
+  link(rel="stylesheet", type="text/css", href="css/jquery.fancybox-thumbs.css")
+  link(rel="stylesheet", type="text/css", href="css/jquery.fancybox-buttons.css")
+
+  script(src='js/jquery.fancybox-buttons.js', type='text/javascript')
+  script(src='js/jquery.fancybox-thumbs.js', type='text/javascript')
+  script(src='js/jquery.fancybox.pack.js', type='text/javascript')
+  script(src='js/jquery.mousewheel-3.0.6.pack.js', type='text/javascript')
+
+block big_header
+  div.blog_wrap.clearfix
+    div.pattern
+      div.gray
+        div.container
+            div.row
+              div.col-lg-12.col-md-12.col-sm-12.col-xs-12
+                h1.page-title FINAL - PRODUCTS
+
+block full
+  div.col-lg-12.col-md-12.col-sm-12.col-xs-
+    h1.heading Final MarketBalance
+    div.row
+      div.col-lg-9.col-md-9.col-sm-9.col-xs-9 
+        p Final MarketBalance is a unique way to view prices, bid, ask and volume together on the same chart while showing the relation between market powers as they change during the trading session.
+        h3 Download
+        ul
+          li <a href="#">Install Package</a> for NinjaTrader 7 (Include 14 days Free Trail)
+          li <a href="#">User Guide</a>
+          li <a href="#">Subscribe</a> for $59/Month (through PayPal)
+          li <a href="#">FAQ</a>
+      div.col-lg-3.col-md-3.col-sm-3.col-xs-3
+        a.fancybox-button(href="img/MarketBalance1.png", target="_blank" rel="fancybox-button[gal_1]")
+          img.img-responsive.thumbnail(src="img/MarketBalance1.png", alt="Final MarketBalance")
+    
